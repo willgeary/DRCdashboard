@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Democratic Republic of Congo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <style type="text/css">
+  	
+  	.footer {
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  padding: 1rem;
+	  background-color: #efefef;
+	  text-align: center;
+	  font-style: 14px;
+	  font-weight: 300;
+	}
+
+	.header {
+		font-size: 40px;
+		font-weight: 400;
+	}
+
+	.subheader {
+		font-size: 24px;
+		font-weight: 200;
+	}
+
+	.populationPyramid {
+		font-size: 22px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	img {
+    display: block;
+    margin: auto;
+	}
+
+	#mapid { height: 400px; width: 50%}
+	
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="header">Democratic Republic of Congo</h1>
+<p class="subheader">Humanitarian Dashboard</p>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-pills nav-justified" role="tablist">
+    <li role="presentation" class="active"><a href="#1" aria-controls="1" role="tab" data-toggle="tab">Background</a></li>
+    <li role="presentation"><a href="#2" aria-controls="2" role="tab" data-toggle="tab">Demographic</a></li>
+    <li role="presentation"><a href="#3" aria-controls="3" role="tab" data-toggle="tab">Socio-Economic</a></li>
+    <li role="presentation"><a href="#4" aria-controls="4" role="tab" data-toggle="tab">Population Density</a></li>
+    <li role="presentation"><a href="#5" aria-controls="5" role="tab" data-toggle="tab">Conflict Map</a></li>
+    <li role="presentation"><a href="#6" aria-controls="6" role="tab" data-toggle="tab">Data and Methodologies</a></li>
+  </ul>
+
+<!-- Tab panes -->
+  <div class="tab-content">
+
+  <!-- Background -->
+	  <div role="tabpanel" class="tab-pane active" id="1">
+
+	  	 <div id="timeline">
+	  	 	
+	  	 	<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1uTCe7b0cDv4vD84ghv73GAIz58qGbPRrFlJNSLIkZd8&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+
+	  	 </div>
+
+	  </div>
+
+	<!-- Population Density -->
+	  <div role="tabpanel" class="tab-pane" id="4">
+
+	  	<iframe width="100%" height="800" frameborder="0" src="https://willgeary.carto.com/builder/495023ac-f93c-11e6-b67e-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+	  </div>
+
+	<!-- Demographic -->
+	 <div role="tabpanel" class="tab-pane" id="2">
+	 	
+	 	<p style="color:white">...</p>
+
+	 	<p class="populationPyramid">DRC Population from 1980 - 2050 (proj.)</p>
+
+	 	<iframe width="100%" height="500" align = "middle" frameborder="0" scrolling="no" 
+	  	src="charts/congo_population.html"></iframe>
+
+	  	<iframe width="50%" height="500" align = "left" frameborder="0" scrolling="no" 
+	  	src="charts/fertility_rate.html"></iframe>
+
+	  	<iframe width="50%" height="500" align = "right" frameborder="0" scrolling="no" 
+	  	src="charts/life_expectancy.html"></iframe>
+	  	
+	  	<!-- Legend -->	
+	  	<img id="legend" src="images/country_legend.png" alt="Legend">
+	  	<!-- End Legend -->
+
+	  	<p style="color:white">...</p>
+
+	  	<iframe width="100%" height="500" align = "middle" frameborder="0" scrolling="no" 
+	  	src="charts/infant_mortality.html"></iframe>
+
+	  	<p style="color:white">...</p>
+
+	  	<hr width="90%">
+
+	  	<iframe width="50%" height="500" align = "left" frameborder="0" scrolling="no" 
+	  	src="charts/urban_rural.html"></iframe>
+
+	  	<iframe width="50%" height="500" align = "right" frameborder="0" scrolling="no"
+	  	src="charts/idp_returnees.html"></iframe>
+
+	  	<p> </p>
+
+	  	<p style="color:white">...</p>
+
+	  	
+	  </div>
+
+
+	<!-- Socio-Econommic -->
+ 	  <div role="tabpanel" class="tab-pane" id="3">
+
+	  	<iframe width="50%" height="500" align="left" frameborder="0" scrolling="no" 
+	  	src="charts/gdp_per_capita.html"></iframe>
+
+	  	<iframe width="50%" height="500" align = "right" frameborder="0" scrolling="no" 
+	  	src="charts/total_gdp.html"></iframe>
+
+	  	<!-- Legend -->	
+	  	<img id="legend" src="images/country_legend.png" alt="Legend">
+	  	<!-- End Legend -->
+
+	  	<iframe width="100%" height="500" align = "middle" frameborder="0" scrolling="no" 
+	  	src="charts/gdp_growth.html"></iframe>
+
+	  	<p> </p>
+
+	  	<p style="color:white">...</p>
+
+	  	<h4>GDP Composition by Sector (2016 est.)</h4>
+
+			<table style="width:50%" align="left">
+			  <tr>
+			    <th>Sector</th>
+			    <th>Percentage</th>
+			  </tr>
+			  <tr>
+			    <td>Agriculture</td>
+			    <td>20.1%</td> 
+			  </tr>
+			  <tr>
+			    <td>Industry</td>
+			    <td>31.7%</td> 
+			  </tr>
+			  <tr>
+			    <td>Services</td>
+			    <td>48.1%</td> 
+			  </tr>
+			</table>
+
+			<table style="width:50%" align="right">
+
+			  <!-- , , , , , , cocoa, quinine, cassava (manioc, tapioca), bananas, plantains, peanuts, root crops, corn, fruits; wood products -->
+			  <tr>
+			    <th>Agricultural Products:</th>
+			  </tr>
+			  <tr>
+			    <td>coffee</td>
+			    <td>sugar</td>
+			    <td>palm oil</td>
+			    <td>rubber</td>
+			    <td>tea</td>
+			  </tr>
+			  <tr>
+			    <td>cotton</td>
+			    <td>cocoa</td>
+			    <td>quinine</td>
+			    <td>cassava</td>
+			  </tr>
+			  <tr>
+			    <td>bananas</td>
+			    <td>plantains</td>
+			    <td>peanuts</td> 
+			    <td>root crops</td>
+			  </tr>
+			  <tr>
+			    <td>corn</td>
+			    <td>fruits</td>
+			    <td>wood products</td> 
+			    <td> </td> 
+
+			  </tr>
+			</table>
+
+	  	<p style="color:white">...</p>
+	  	<p style="color:white">...</p>
+
+
+
+	  </div>
+
+
+
+	  <!-- Conflict Map -->	
+  
+	  <div role="tabpanel" class="tab-pane" id="5">
+
+	  	<iframe width="100%" height="800" frameborder="0" src="https://willgeary.carto.com/builder/a68a3bfc-f8a1-11e6-87d4-0ecd1babdde5/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+	  </div>
+
+	<!-- Data and Methodologies -->
+	  <div role="tabpanel" class="tab-pane" id="6">
+	  <p style="color:white">...</p>
+
+
+	  <h3> Data and Code: </h3>
+
+	  <p> All of the data and code used to create everything on this website is available on <b><a href="https://github.com/willgeary/DRCdashboard">GitHub</a></b>.</p>
+
+	  <p> See my tutorial, which walks through all of the steps I took to (1) get the data, (2) parse and format the data, and (3) make maps and charts.</p>
+
+	  <h3> Sources and Methodologies: </h3>
+
+	  <h4> DRC Background Slideshow </h4>
+	  <p>* Created with <a href="https://timeline.knightlab.com/">TimelineJS</a>, an open-source tool created by Northwestern University's <a href="http://knightlab.northwestern.edu/">Knight Lab</a>.</p>
+
+	  <p>* All sources are listed directly in the slideshow</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> DRC Population Pyramid </h4>
+	  <p>* Created in R using rCharts, an open-source plotting library, with help from <a href="https://walkerke.github.io/2014/06/rcharts-pyramids/"> this tutorial</a>.</p>
+
+	  <p>* Data from <a href="http://www.census.gov/population/international/data/idb/informationGateway.php">International Data Base from the US Census Bureau</a></p>
+
+	  <p style="color:white">...</p>
+
+	  <h4> Fertility Rate </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a>, an open-source plotting library</p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Demographic indicators -> Fertility rate, total (births per women)</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> Life Expectancy </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Demographic indicators -> Life expectancy at birth, total (years)</p>
+
+	  <p style="color:white">...</p>
+
+	  <h4> Infant Mortality Rate </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Demographic indicators -> Infant Mortality Rate (per 1,000 live births)</p>
+
+	  <p style="color:white">...</p>
+
+	  <h4> Urban vs Rural Population </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://www.fao.org/faostat/en/#country/250">Food and Agriculture Organization of the United Nations</a></p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> Internally Displaced Persons and Returnees </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="https://data.humdata.org/dataset/dr-congo-affected-persons-locations">The Humanitarian Data Exchange</a></p>
+
+	  <p>* Data table used: DR Congo - Affected Persons Locations</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> GDP per Capita </h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Socio-economic indicators -> GDP Per Capita (current US$)</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> Total GDP</h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Socio-economic indicators -> GDP (current US$)</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> GDP Growth</h4>
+	  
+	  <p>* Created in python using <a href="https://plot.ly/">Plotly</a></p>
+
+	  <p>* Data from <a href="http://data.uis.unesco.org/">UNESCO</a></p>
+
+	  <p>* To find the data table: Demographic and socio-economic -> Socio-economic indicators -> GDP Growth (annual %)</p>
+
+	  <p style="color:white">...</p>
+
+
+	  <h4> GDP Composition by Sector </h4>
+	  
+	  <p>* Data from <a href="https://www.cia.gov/library/publications/the-world-factbook/geos/cg.html">CIA World Factbook</a></p>
+
+
+	  <p style="color:white">...</p>
+
+
+
+	  <h4> Agricultural Products </h4>
+	  
+	  <p>* Data from <a href="https://www.cia.gov/library/publications/the-world-factbook/geos/cg.html">CIA World Factbook</a></p>
+
+
+	  <p style="color:white">...</p>
+
+
+
+	  <h4> Population Density Map </h4>
+
+	  <p>* Data analyzed in Python. Map created with <a href="https://carto.com/">Carto</a>.</p>
+	  
+	  <p>* Congo populaton data and shapefile downloaded from <a href="https://data.humdata.org/dataset/dr-congo-health-0">The Humanitarian Data Exchange</a></p>
+
+	  <p>* Populated places shapefile downloaded from <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/"> Natural Earth</a></p>
+
+	  <p>* See my tutorial for more detail on how I made this map</p>
+
+
+	  <p style="color:white">...</p>
+
+
+
+	  <h4> Conflict Map </h4>
+
+	  <p>* Data analyzed in Python. Map created with <a href="https://carto.com/">Carto</a>.</p>
+	  
+	  <p>* Conflict data downloaded from <a href="http://www.acleddata.com/data/realtime-data">Armed Conflict Location and Event Dataset (ACLED)</a></p>
+
+	  <p>* Specific dataset: "Realtime 2017 All Africa File (updated 18th February 2017)"</p>
+
+	  <p>* See my tutorial for more detail on how I made this map</p>
+
+
+	  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+	<p class="text-muted" align="center">Will Geary    |    <a href="https://willgeary.github.io">willgeary.github.io</a>    |    wcg2111@columbia.edu</p>
+</div>
+
+
+<!-- JS libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+<!-- Custom javascript -->
+<script src="script.js"></script>
