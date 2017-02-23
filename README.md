@@ -1,4 +1,4 @@
-# DRC Dashboard
+# Democratic Republic of Congo - Peacekeeping Dashboard
 
 This repository contains all of the data and code used to create https://willgeary.github.io/DRCdashboard/.
 
