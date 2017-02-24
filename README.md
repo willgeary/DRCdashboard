@@ -9,7 +9,7 @@ Please find a tutorial documenting all of the steps taken to get, parse, format 
 <iframe width="800" height="600" src="https://willgeary.carto.com/builder/a68a3bfc-f8a1-11e6-87d4-0ecd1babdde5/embed" frameborder="0" allowfullscreen></iframe>
 
 
-# DRC Conflict Map
+## DRC Conflict Map
 ![Conflict Map](http://i.imgur.com/vmbNDNo.png)
 
 
